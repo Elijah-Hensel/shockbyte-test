@@ -1,6 +1,7 @@
 //index functionality
 
 const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
 const usernameForm = document.getElementById("username");
 const passwordForm = document.getElementById("password");
 const errorSpan = document.getElementById("login-error-notif");
@@ -8,7 +9,7 @@ const errorSpan = document.getElementById("login-error-notif");
 let user = [];
 
 async function getAdmin() {
-  await fetch("../user.json")
+  await fetch("./user.json")
     .then((res) => res.json())
     .then((data) => {
       user = data;
@@ -31,7 +32,7 @@ if (loginBtn) {
       passwordForm.value === user.password
     ) {
       localStorage.setItem("adminAuth", true);
-      window.location.href = "/list.html";
+      window.location.href = "./list.html";
     } else {
       errorSpan.innerHTML = "Incorrect Email Or Password – Please Try Again";
       clearLoginForm();
@@ -71,8 +72,21 @@ async function fetchData() {
     "https://600f10ec6c21e1001704e67a.mockapi.io/api/v1/stats"
   );
   const data = await res.json();
-  listData(data);
-  console.log(data);
+  if (data) {
+    listData(data);
+  } else {
+    document.getElementById(
+      "data-list"
+    ).innerHTML = `<p class="error">Could Not Retrieve Data At This Time</p>`;
+  }
+}
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", async (event) => {
+    event.preventDefault();
+    localStorage.removeItem("adminAuth");
+    window.location.href = "./index.html";
+  });
 }
 
 fetchData();
