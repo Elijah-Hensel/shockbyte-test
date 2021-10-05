@@ -43,3 +43,9 @@
         - Create basic pagenation
         - Create logout button
         - Begin vue.js or react.js project
+
+10/05/21 - 8:45am-9:27am CDT
+    - Pagenation placeholder text
+    - Logout functionality
+    - Created github repo with prototype & empty Vue.js project
+    - Decided to try Vue.js first
