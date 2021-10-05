@@ -1,0 +1,45 @@
+10/04/21 - 10:40am CDT
+    - I have reviewed the test requirements
+    - Studied API response and data being recieved
+    - Considering Vue.js or React.js
+        - Vue is what the company uses, React is what I'm most comfortable with
+        - Is a week enough time to learn a new library?
+
+    - Basic illustration of required components completed
+        - Header
+        - Footer
+        - Dashboard Element
+        - Login form
+        - List for API response
+            - Individual list items
+    - Beginning wireframe in Photoshop
+
+10/04/21 - 01:15pm CDT
+    - Completed wireframe  
+        - Login Page
+        - List of servers in table
+    - Beginning High Fidelity Prototype
+        - HTML, CSS, Vanilla js
+        - Beginning with the landing Page
+
+10/04/21 - 04:27pm CDT
+    - Wrapping up before going to work
+    - Prototype landing/login page created and styled
+    - Next Steps:
+        - Create a user.json file for temporary admin user credentials
+        - Add scripting to login with user information
+        - Use bcrypt and JWT to confirm login security
+        - Create dashboard with API information
+            - Either from a json file with information pulled from API or using FETCH
+
+10/04/21 - 8:30-10:40pm CDT
+    - Created user admin JSON file for local authentication
+    - Login functionality completed via click listener
+        - Redirects to /list.html
+    - Admin boolean stored in localStorage
+        - localStorage.admin? => fetch data from API
+        - ten results returned from API
+    - Next Steps:
+        - Create basic pagenation
+        - Create logout button
+        - Begin vue.js or react.js project

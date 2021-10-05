@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shockbyte - Admin Portal - Node Servers</title>
+    <link rel="stylesheet" href="list.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-container">
+        <div class="sb-logo-container">
+          <img class="logo" src="./assets/logo.png" alt="Shockbyte Logo" />
+          <div class="vertical-break"></div>
+          <span class="header-text"> Admin Portal</span>
+        </div>
+        <div class="sb-header-subtext">
+          <span class="header-text">Node Servers</span>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div id="list-element">
+            <span id="list-span" class="heading-span">
+                <p class="list-key">ID</p>
+                <p class="list-key">Free Ram</p>
+                <p class="list-key">Allocated Ram</p>
+                <p class="list-key">Free Disk</p>
+                <p class="list-key">Allocated Disk</p>
+                <p class="list-key">Up Since</p>
+            </span>
+            <div id="list-container" class="list-container">
+             <ul id="data-list"></ul>
+            </div>
+          </div>
+        </div>
+    </main>
+      
+    <script src="app.js"></script>
+  </body>
+</html>
